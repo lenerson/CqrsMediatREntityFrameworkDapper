@@ -8,26 +8,23 @@ namespace CqrsMediatREFDapper.Infra.Data.Context.Mappings
     {
         public void Configure(EntityTypeBuilder<Course> builder)
         {
-
+            builder.ToTable("Courses");
             builder
                 .Property(x => x.Id)
                 .ValueGeneratedOnAdd();
             builder
-                .Property(x => x.Name.Value)
+                .Property(x => x.Name)
                 .HasMaxLength(100)
-                .HasField("Name")
                 .IsRequired();
             builder
-                .Property(x => x.Description.Value)
+                .Property(x => x.Description)
                 .HasMaxLength(1000)
-                .HasField("Description")
                 .IsRequired();
             builder
                 .Property(x => x.Price)
                 .IsRequired();
             builder
-                .Property(x => x.Video.Value)
-                .HasField("Video")
+                .Property(x => x.Video)
                 .IsRequired();
         }
     }

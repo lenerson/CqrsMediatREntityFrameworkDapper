@@ -17,11 +17,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2-CrossCutting", "4.2-Cro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CqrsMediatREFDapper.Domain", "src\CqrsMediatREFDapper.Domain\CqrsMediatREFDapper.Domain.csproj", "{035D153D-9F6F-4036-9A26-EBB08C8E355D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsMediatREFDapper.Infra.Data.Context", "src\CqrsMediatREFDapper.Infra.Data.Context\CqrsMediatREFDapper.Infra.Data.Context.csproj", "{C895B89D-254F-426D-B6F6-5F8E06966176}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CqrsMediatREFDapper.Infra.Data.Context", "src\CqrsMediatREFDapper.Infra.Data.Context\CqrsMediatREFDapper.Infra.Data.Context.csproj", "{C895B89D-254F-426D-B6F6-5F8E06966176}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsMediatREFDapper.Infra.Data.Repository", "src\CqrsMediatREFDapper.Infra.Data.Repository\CqrsMediatREFDapper.Infra.Data.Repository.csproj", "{14E70D09-23BA-4CB2-AB5E-C0E9C7ABFF8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CqrsMediatREFDapper.Infra.Data.Repository", "src\CqrsMediatREFDapper.Infra.Data.Repository\CqrsMediatREFDapper.Infra.Data.Repository.csproj", "{14E70D09-23BA-4CB2-AB5E-C0E9C7ABFF8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsMediatREFDapper.Infra.CrossCutting.Util", "src\CqrsMediatREFDapper.Infra.CrossCutting.Util\CqrsMediatREFDapper.Infra.CrossCutting.Util.csproj", "{BA5501CB-B6B9-41C7-A056-A9354CF49F38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CqrsMediatREFDapper.Infra.CrossCutting.Util", "src\CqrsMediatREFDapper.Infra.CrossCutting.Util\CqrsMediatREFDapper.Infra.CrossCutting.Util.csproj", "{BA5501CB-B6B9-41C7-A056-A9354CF49F38}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CqrsMediatREFDapper.Application", "src\CqrsMediatREFDapper.Application\CqrsMediatREFDapper.Application.csproj", "{2616EAC0-1D84-4C46-BEB5-5DDB2A5C81AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2F1535F6-233E-424F-BF9C-57ACDDC641D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsMediatREFDapper.Api", "src\CqrsMediatREFDapper.Api\CqrsMediatREFDapper.Api.csproj", "{61C3049E-015C-4F12-B3E0-831E8E58CE2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsMediatREFDapper.Infra.CrossCutting.IoC", "src\CqrsMediatREFDapper.Infra.CrossCutting.IoC\CqrsMediatREFDapper.Infra.CrossCutting.IoC.csproj", "{DB15FB22-4876-4EF8-B280-8466633DC8CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,17 +53,36 @@ Global
 		{BA5501CB-B6B9-41C7-A056-A9354CF49F38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA5501CB-B6B9-41C7-A056-A9354CF49F38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA5501CB-B6B9-41C7-A056-A9354CF49F38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2616EAC0-1D84-4C46-BEB5-5DDB2A5C81AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2616EAC0-1D84-4C46-BEB5-5DDB2A5C81AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2616EAC0-1D84-4C46-BEB5-5DDB2A5C81AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2616EAC0-1D84-4C46-BEB5-5DDB2A5C81AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61C3049E-015C-4F12-B3E0-831E8E58CE2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61C3049E-015C-4F12-B3E0-831E8E58CE2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61C3049E-015C-4F12-B3E0-831E8E58CE2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61C3049E-015C-4F12-B3E0-831E8E58CE2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB15FB22-4876-4EF8-B280-8466633DC8CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB15FB22-4876-4EF8-B280-8466633DC8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB15FB22-4876-4EF8-B280-8466633DC8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB15FB22-4876-4EF8-B280-8466633DC8CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{751FADFD-C6D8-464F-93AA-9141114E7E2B} = {2F1535F6-233E-424F-BF9C-57ACDDC641D5}
+		{A579EDBB-D2B9-4517-AFA6-FF6AEE513FBF} = {2F1535F6-233E-424F-BF9C-57ACDDC641D5}
+		{9EC17304-12CD-4B5F-8D78-FC900AA9340B} = {2F1535F6-233E-424F-BF9C-57ACDDC641D5}
+		{BFA52CC2-2A5B-4100-B0C9-4CA71830E88D} = {2F1535F6-233E-424F-BF9C-57ACDDC641D5}
 		{B290BF3B-DEE1-4F88-914E-CE7580CCBA66} = {BFA52CC2-2A5B-4100-B0C9-4CA71830E88D}
 		{C3EFC475-1BF9-4465-8BF5-9596583F4CE5} = {BFA52CC2-2A5B-4100-B0C9-4CA71830E88D}
 		{035D153D-9F6F-4036-9A26-EBB08C8E355D} = {9EC17304-12CD-4B5F-8D78-FC900AA9340B}
 		{C895B89D-254F-426D-B6F6-5F8E06966176} = {B290BF3B-DEE1-4F88-914E-CE7580CCBA66}
 		{14E70D09-23BA-4CB2-AB5E-C0E9C7ABFF8C} = {B290BF3B-DEE1-4F88-914E-CE7580CCBA66}
 		{BA5501CB-B6B9-41C7-A056-A9354CF49F38} = {C3EFC475-1BF9-4465-8BF5-9596583F4CE5}
+		{2616EAC0-1D84-4C46-BEB5-5DDB2A5C81AA} = {A579EDBB-D2B9-4517-AFA6-FF6AEE513FBF}
+		{61C3049E-015C-4F12-B3E0-831E8E58CE2E} = {751FADFD-C6D8-464F-93AA-9141114E7E2B}
+		{DB15FB22-4876-4EF8-B280-8466633DC8CF} = {C3EFC475-1BF9-4465-8BF5-9596583F4CE5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {70007FDD-AE8B-4C96-B67E-5AFB2544E76F}

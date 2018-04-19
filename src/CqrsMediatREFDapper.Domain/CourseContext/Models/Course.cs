@@ -1,7 +1,4 @@
-﻿using CqrsMediatREFDapper.Domain.SharedContext.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
 namespace CqrsMediatREFDapper.Domain.CourseContext.Models
 {
@@ -10,10 +7,10 @@ namespace CqrsMediatREFDapper.Domain.CourseContext.Models
         #region Properties
 
         public Guid Id { get; private set; }
-        public Text Name { get; private set; }
-        public Text Description { get; private set; }
+        public string Name { get; private set; }
+        public string Description { get; private set; }
         public Decimal Price { get; private set; }
-        public Media Video { get; private set; }
+        public byte[] Video { get; private set; }
 
         #endregion
         #region Constructor
@@ -27,20 +24,20 @@ namespace CqrsMediatREFDapper.Domain.CourseContext.Models
             new Course
             {
                 Id = Guid.NewGuid(),
-                Name = new Text { Value = name },
-                Description = new Text { Value = description },
+                Name = name,
+                Description = description,
                 Price = price,
-                Video = new Media { Value = video }
+                Video = video
             };
 
         public static Course CreateToUpdate(Guid id, string name, string description, Decimal price, byte[] video) =>
             new Course
             {
                 Id = id,
-                Name = new Text { Value = name },
-                Description = new Text { Value = description },
+                Name = name,
+                Description = description,
                 Price = price,
-                Video = new Media { Value = video }
+                Video = video
             };
 
         #endregion
