@@ -21,6 +21,7 @@ namespace CqrsMediatREFDapper.Infra.CrossCutting.IoC
             services.AddTransient(typeof(ICourseWriteOnlyRepository), typeof(CourseWriteOnlyRepository));
             services.AddTransient(typeof(ICourseReadOnlyRepository), typeof(CourseReadOnlyRepository));
 
+            // MediatR service
             services.AddMediatR(typeof(Course).GetTypeInfo().Assembly);
         }
     }

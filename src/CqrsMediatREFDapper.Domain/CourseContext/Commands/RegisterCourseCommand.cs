@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace CqrsMediatREFDapper.Domain.CourseContext.Commands
+﻿namespace CqrsMediatREFDapper.Domain.CourseContext.Commands
 {
     public sealed class RegisterCourseCommand : CourseCommand
     {
-        public static RegisterCourseCommand Create(string name, string description, Decimal price, byte[] video) =>
+        public static RegisterCourseCommand Create(string name, string description, decimal price, byte[] video) =>
             new RegisterCourseCommand
             {
                 Name = name,

@@ -9,7 +9,7 @@ namespace CqrsMediatREFDapper.Domain.CourseContext.Models
         public Guid Id { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }
-        public Decimal Price { get; private set; }
+        public decimal Price { get; private set; }
         public byte[] Video { get; private set; }
 
         #endregion
@@ -18,9 +18,9 @@ namespace CqrsMediatREFDapper.Domain.CourseContext.Models
         private Course() { }
 
         #endregion
-        #region Factories
+        #region Factory Methods
 
-        public static Course CreateToInsert(string name, string description, Decimal price, byte[] video) =>
+        public static Course CreateToInsert(string name, string description, decimal price, byte[] video) =>
             new Course
             {
                 Id = Guid.NewGuid(),
