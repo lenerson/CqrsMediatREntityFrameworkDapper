@@ -22,18 +22,27 @@ namespace CqrsMediatREFDapper.Domain.CourseContext.CommandHandlers
             this.courseWriteOnlyRepository = courseWriteOnlyRepository;
         }
 
-        public async Task Handle(RegisterCourseCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(RegisterCourseCommand request, CancellationToken cancellationToken)
         {
             await courseWriteOnlyRepository.Add(Course.CreateToInsert(request.Name, request.Description, request.Price, request.Video));
-            await mediator.Publish(RegisteredCourseEvent.Create(request.Name, new string[] { "lenerson.nunes@gmail.com" }), cancellationToken);
+            await mediator.Publish(RegisteredCourseEvent.Create(request.Name, new string[] { "teste@teste.com" }), cancellationToken);
+
+            return await Unit.Task;
         }
 
-        public async Task Handle(UpdateCourseCommand request, CancellationToken cancellationToken) =>
+        public async Task<Unit> Handle(UpdateCourseCommand request, CancellationToken cancellationToken)
+        {
             await courseWriteOnlyRepository.Update(
                 Course.CreateToUpdate(request.Id, request.Name, request.Description, request.Price, request.Video)
             );
 
-        public async Task Handle(RemoveCourseCommand request, CancellationToken cancellationToken) =>
+            return await Unit.Task;
+        }
+
+        public async Task<Unit> Handle(RemoveCourseCommand request, CancellationToken cancellationToken)
+        {
             await courseWriteOnlyRepository.Remove(request.Id);
+            return await Unit.Task;
+        }
     }
 }
