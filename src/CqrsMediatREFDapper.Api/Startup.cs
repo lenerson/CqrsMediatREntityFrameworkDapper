@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace CqrsMediatREFDapper.Api
 {
@@ -20,6 +21,18 @@ namespace CqrsMediatREFDapper.Api
         {
             services.AddMvc();
 
+            services.AddSwaggerGen(s =>
+            {
+                s.SwaggerDoc("v1", new Info
+                {
+                    Version = "v1",
+                    Title = "CQRS with MediatR, Entity Framework Core and Dapper",
+                    Description = "CQRS with MediatR, Entity Framework Core and Dapper",
+                    Contact = new Contact { Name = "Lenerson Velho Nunes", Email = "lenerson.nunes@gmail.com", Url = "https://dotnetcaxias.wordpress.com/2017/05/02/apresentacao-lenerson-velho-nunes/" },
+                    License = new License { Name = "MIT", Url = "https://github.com/lenerson/CqrsMediatREntityFrameworkDapper/blob/master/LICENSE" }
+                });
+            });
+
             IoC.Configure(services);
         }
 
@@ -32,6 +45,12 @@ namespace CqrsMediatREFDapper.Api
             }
 
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(s =>
+            {
+                s.SwaggerEndpoint("/swagger/v1/swagger.json", "CQRS with MediatR, Entity Framework Core and Dapper API v1.0");
+            });
         }
     }
 }
