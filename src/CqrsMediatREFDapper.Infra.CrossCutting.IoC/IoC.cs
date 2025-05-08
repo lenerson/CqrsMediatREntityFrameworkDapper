@@ -4,7 +4,6 @@ using CqrsMediatREFDapper.Domain.CourseContext.Interfaces.Repositories;
 using CqrsMediatREFDapper.Domain.CourseContext.Models;
 using CqrsMediatREFDapper.Infra.Data.Repository.Dapper;
 using CqrsMediatREFDapper.Infra.Data.Repository.EntityFramework;
-using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -15,14 +14,14 @@ namespace CqrsMediatREFDapper.Infra.CrossCutting.IoC
         public static void Configure(IServiceCollection services)
         {
             // Application Services
-            services.AddScoped(typeof(ICourseAppService), typeof(CourseAppService));
+            services.AddScoped<ICourseAppService, CourseAppService>();
 
             // Repositories
-            services.AddTransient(typeof(ICourseWriteOnlyRepository), typeof(CourseWriteOnlyRepository));
-            services.AddTransient(typeof(ICourseReadOnlyRepository), typeof(CourseReadOnlyRepository));
+            services.AddTransient<ICourseWriteOnlyRepository, CourseWriteOnlyRepository>();
+            services.AddTransient<ICourseReadOnlyRepository, CourseReadOnlyRepository>();
 
             // MediatR service
-            services.AddMediatR(typeof(Course).GetTypeInfo().Assembly);
+            services.AddMediatR(c => c.RegisterServicesFromAssembly(typeof(Course).GetTypeInfo().Assembly));
         }
     }
 }

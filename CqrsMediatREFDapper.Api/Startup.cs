@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
+using System;
 
 namespace CqrsMediatREFDapper.Api
 {
@@ -19,17 +21,18 @@ namespace CqrsMediatREFDapper.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddControllers();
+            services.AddEndpointsApiExplorer();
 
             services.AddSwaggerGen(s =>
             {
-                s.SwaggerDoc("v1", new Info
+                s.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
                     Title = "CQRS with MediatR, Entity Framework Core and Dapper",
                     Description = "CQRS with MediatR, Entity Framework Core and Dapper",
-                    Contact = new Contact { Name = "Lenerson Velho Nunes", Email = "lenerson.nunes@gmail.com", Url = "https://dotnetcaxias.wordpress.com/2017/05/02/apresentacao-lenerson-velho-nunes/" },
-                    License = new License { Name = "MIT", Url = "https://github.com/lenerson/CqrsMediatREntityFrameworkDapper/blob/master/LICENSE" }
+                    Contact = new OpenApiContact { Name = "Lenerson Velho Nunes",  Email = "lenerson.nunes@gmail.com", Url = new Uri("https://dotnetcaxias.wordpress.com/2017/05/02/apresentacao-lenerson-velho-nunes/") },
+                    License = new OpenApiLicense { Name = "MIT", Url = new Uri("https://github.com/lenerson/CqrsMediatREntityFrameworkDapper/blob/master/LICENSE") }
                 });
             });
 
@@ -37,14 +40,14 @@ namespace CqrsMediatREFDapper.Api
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(WebApplication app)
         {
-            if (env.IsDevelopment())
+            if (!app.Environment.IsProduction())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();
+            app.MapControllers();
 
             app.UseSwagger();
             app.UseSwaggerUI(s =>

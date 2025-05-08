@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2037
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Api", "1-Api", "{751FADFD-C6D8-464F-93AA-9141114E7E2B}"
 EndProject
@@ -27,9 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CqrsMediatREFDapper.Applica
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2F1535F6-233E-424F-BF9C-57ACDDC641D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsMediatREFDapper.Api", "src\CqrsMediatREFDapper.Api\CqrsMediatREFDapper.Api.csproj", "{61C3049E-015C-4F12-B3E0-831E8E58CE2E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsMediatREFDapper.Infra.CrossCutting.IoC", "src\CqrsMediatREFDapper.Infra.CrossCutting.IoC\CqrsMediatREFDapper.Infra.CrossCutting.IoC.csproj", "{DB15FB22-4876-4EF8-B280-8466633DC8CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsMediatREFDapper.Api", "src\CqrsMediatREFDapper.Api\CqrsMediatREFDapper.Api.csproj", "{1A8515E8-2883-412B-8DE7-6196A76AD47F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,14 +57,14 @@ Global
 		{2616EAC0-1D84-4C46-BEB5-5DDB2A5C81AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2616EAC0-1D84-4C46-BEB5-5DDB2A5C81AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2616EAC0-1D84-4C46-BEB5-5DDB2A5C81AA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{61C3049E-015C-4F12-B3E0-831E8E58CE2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61C3049E-015C-4F12-B3E0-831E8E58CE2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61C3049E-015C-4F12-B3E0-831E8E58CE2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61C3049E-015C-4F12-B3E0-831E8E58CE2E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DB15FB22-4876-4EF8-B280-8466633DC8CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DB15FB22-4876-4EF8-B280-8466633DC8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB15FB22-4876-4EF8-B280-8466633DC8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB15FB22-4876-4EF8-B280-8466633DC8CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A8515E8-2883-412B-8DE7-6196A76AD47F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A8515E8-2883-412B-8DE7-6196A76AD47F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A8515E8-2883-412B-8DE7-6196A76AD47F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A8515E8-2883-412B-8DE7-6196A76AD47F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,8 +81,8 @@ Global
 		{14E70D09-23BA-4CB2-AB5E-C0E9C7ABFF8C} = {B290BF3B-DEE1-4F88-914E-CE7580CCBA66}
 		{BA5501CB-B6B9-41C7-A056-A9354CF49F38} = {C3EFC475-1BF9-4465-8BF5-9596583F4CE5}
 		{2616EAC0-1D84-4C46-BEB5-5DDB2A5C81AA} = {A579EDBB-D2B9-4517-AFA6-FF6AEE513FBF}
-		{61C3049E-015C-4F12-B3E0-831E8E58CE2E} = {751FADFD-C6D8-464F-93AA-9141114E7E2B}
 		{DB15FB22-4876-4EF8-B280-8466633DC8CF} = {C3EFC475-1BF9-4465-8BF5-9596583F4CE5}
+		{1A8515E8-2883-412B-8DE7-6196A76AD47F} = {751FADFD-C6D8-464F-93AA-9141114E7E2B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {70007FDD-AE8B-4C96-B67E-5AFB2544E76F}
