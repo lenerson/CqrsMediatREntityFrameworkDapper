@@ -1,4 +1,4 @@
-﻿using MediatR;
+﻿using Mediator;
 using System.Collections.Generic;
 
 namespace CqrsMediatREFDapper.Domain.CourseContext.Events

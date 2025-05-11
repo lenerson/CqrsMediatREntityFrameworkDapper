@@ -1,9 +1,9 @@
 ﻿using CqrsMediatREFDapper.Domain.SharedContext.Interfaces.Repositories;
 using CqrsMediatREFDapper.Infra.CrossCutting.Util;
 using Dapper.Contrib.Extensions;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Threading.Tasks;
 
 namespace CqrsMediatREFDapper.Infra.Data.Repository.Common
