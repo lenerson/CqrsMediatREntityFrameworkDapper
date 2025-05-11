@@ -3,7 +3,7 @@ using CqrsMediatREFDapper.Application.Interfaces;
 using CqrsMediatREFDapper.Application.QueryModels.Output;
 using CqrsMediatREFDapper.Domain.CourseContext.Commands;
 using CqrsMediatREFDapper.Domain.CourseContext.Interfaces.Repositories;
-using MediatR;
+using Mediator;
 using System;
 using System.Collections.Generic;
 using System.Linq;

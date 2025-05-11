@@ -7,7 +7,7 @@ namespace CqrsMediatREFDapper.Application.InputModels
         public Guid Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public Decimal Price { get; set; }
-        public byte[] Video { get; set; }
+        public decimal Price { get; set; }
+        public string Video { get; set; }
     }
 }

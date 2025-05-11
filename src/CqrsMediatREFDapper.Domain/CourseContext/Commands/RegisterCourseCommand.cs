@@ -2,7 +2,7 @@
 {
     public sealed class RegisterCourseCommand : CourseCommand
     {
-        public static RegisterCourseCommand Create(string name, string description, decimal price, byte[] video) =>
+        public static RegisterCourseCommand Create(string name, string description, decimal price, string video) =>
             new RegisterCourseCommand
             {
                 Name = name,

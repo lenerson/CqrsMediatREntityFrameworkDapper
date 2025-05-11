@@ -33,8 +33,8 @@ namespace CqrsMediatREFDapper.Api.Controllers
         public async Task<IActionResult> Get() =>
             Ok(await courseAppService.GetAllCourses());
 
-        [HttpGet("{id}", Name = "Get")]
-        public async Task<IActionResult> Get(Guid id) =>
+        [HttpGet("watch/{id}")]
+        public async Task<IActionResult> Watch(Guid id) =>
             Ok(await courseAppService.WatchCourse(id));
     }
 }

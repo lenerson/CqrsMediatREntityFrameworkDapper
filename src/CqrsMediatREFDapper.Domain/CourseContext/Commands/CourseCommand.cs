@@ -1,4 +1,4 @@
-﻿using MediatR;
+﻿using Mediator;
 using System;
 
 namespace CqrsMediatREFDapper.Domain.CourseContext.Commands
@@ -11,7 +11,7 @@ namespace CqrsMediatREFDapper.Domain.CourseContext.Commands
         public string Name { get; protected set; }
         public string Description { get; protected set; }
         public decimal Price { get; protected set; }
-        public byte[] Video { get; protected set; }
+        public string Video { get; protected set; }
 
         #endregion
         #region Constructor
