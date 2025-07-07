@@ -12,7 +12,7 @@ namespace CqrsMediatREFDapper.Domain.CourseContext.EventHandlers
             //notification.Emails.ForEach(e => SendMail(e));
 
 
-            await Task.CompletedTask;
+            await ValueTask.CompletedTask;
         }
     }
 }
